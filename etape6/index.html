@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TP4 - CRUD Persons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FORMULAIRE D'AJOUT -->
+    <div id="form_container">
+
+        <div class="form_group">
+            <label class="form_label">Nom:</label>
+            <input type="text" id="form_nom" class="form_field">
+        </div>
+
+        <div class="form_group">
+            <label class="form_label">Prénom:</label>
+            <input type="text" id="form_prenom" class="form_field">
+        </div>
+
+        <div class="form_group">
+            <label class="form_label">Points:</label>
+            <input type="number" id="form_points" class="form_field">
+        </div>
+
+        <button class="btn-add" onclick="doNewData()">
+            Ajouter
+        </button>
+
+    </div>
+
+
+    <!-- TROIS FONCTIONNALITÉS SUPPLÉMENTAIRES -->
+    <div id="extra_features">
+
+        <div>
+            <label>Trier par :</label>
+            <select id="sort_field" onchange="sortPersons()">
+                <option value="nom">Nom</option>
+                <option value="prenom">Prénom</option>
+                <option value="points">Points</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Rechercher :</label>
+            <input
+                type="text"
+                id="search_field"
+                placeholder="Nom ou prénom"
+                oninput="filterPersons()">
+        </div>
+
+        <button class="btn-duplicate" onclick="removeDuplicates()">
+            Supprimer les doublons
+        </button>
+
+    </div>
+
+
+    <!-- TABLEAU DES PERSONNES -->
+    <div id="table_container">
+
+        <table id="tableau">
+
+            <thead>
+                <tr>
+                    <th class="col_number">N°</th>
+                    <th class="col_text">Nom</th>
+                    <th class="col_text">Prénom</th>
+                    <th class="col_number">Points</th>
+                    <th class="col_chkbox">Select</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+
+        </table>
+
+
+        <!-- RÉSUMÉ -->
+        <div id="container_summary">
+
+            <p id="p1">0 ligne(s)</p>
+
+            <p id="p2"></p>
+
+            <p id="p3">Totale point(s)= 0</p>
+
+        </div>
+
+
+        <!-- BOUTONS -->
+        <div id="container_btn">
+
+            <button class="btn-consol" onclick="consoleTableau()">
+                Console Tableau
+            </button>
+
+            <button class="btn-del" onclick="deleteRow()">
+                Supprimer
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

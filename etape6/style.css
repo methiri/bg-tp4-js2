@@ -1,0 +1,129 @@
+
+/* STYLE GÉNÉRAL DU TABLEAU */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #0785b5;
+    color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.col_number,
+.col_chkbox {
+    text-align: center;
+}
+
+.col_text {
+    text-align: left;
+}
+
+
+/* CONTENEUR DU TABLEAU */
+
+#table_container {
+    width: 60%;
+    margin: 20px auto;
+    font-family: Calibri, sans-serif;
+}
+
+
+/* FORMULAIRE */
+
+#form_container {
+    width: 60%;
+    margin: 30px auto 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: Calibri, sans-serif;
+}
+
+.form_group {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.form_label {
+    font-size: 12px;
+}
+
+.form_field {
+    width: 100px;
+}
+
+
+/* RÉSUMÉ */
+
+#container_summary {
+    background-color: #eeeeee;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+#container_summary p {
+    margin: 5px;
+}
+
+
+/* FONCTIONNALITÉS SUPPLÉMENTAIRES */
+
+#extra_features {
+    width: 60%;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: Calibri, sans-serif;
+}
+
+#extra_features input,
+#extra_features select {
+    padding: 5px;
+}
+
+
+/* BOUTONS */
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 7px 10px;
+    color: white;
+}
+
+.btn-add {
+    background-color: #16a34a;
+}
+
+.btn-consol {
+    background-color: #d6a500;
+}
+
+.btn-del {
+    background-color: #dc2626;
+}
+
+.btn-duplicate {
+    background-color: #555555;
+}
+
+#container_btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-top: 10px;
+}
